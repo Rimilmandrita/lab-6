@@ -1,16 +1,21 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main() {
-	int len,j,i;
-	char arr[10],*p;
-	cin>>arr;
-	p=&arr[0];
-            for (i =0; i<=10; i++) {
-               cout<<"\n";
-                for (j=10-i; j<10; j++) {
-                        cout<<*(p+j);
-                }
-        }
+	char str[20], *p;
+	cout << "Enter a string of about ten characters." << endl;
+	cin >> str;
+
+	p=&(str[0]);
+
+	int len=0;
+	for (int i=0; *(p+i)!=0; ++i) {
+		len = i;
+	}
+
+	for (int i=len; i>0; --i) {
+		cout << p+i << endl;
+	}
+
 	return 0;
 }
